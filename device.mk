@@ -23,13 +23,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.sf.lcd_density=400
 
-# Audio Configuration
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/vendor/etc/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
-    $(DEVICE_PATH)/vendor/etc/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
-    $(DEVICE_PATH)/vendor/etc/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
-    $(DEVICE_PATH)/vendor/etc/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
-
 # Camera
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libc++.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++.so
@@ -37,17 +30,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libc++demangle_vendor
 
-# Device Init
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/vendor/etc/init/init.okinawa.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.okinawa.rc
-
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service-okinawa
-
-# Media
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/vendor/etc/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml
 
 # Partitions
 TARGET_USES_LEGACY_AB := true
