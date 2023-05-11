@@ -34,6 +34,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service-okinawa
 
+# Model
+PRODUCT_MODEL := moto z4
+
 # Partitions
 TARGET_USES_LEGACY_AB := true
 
